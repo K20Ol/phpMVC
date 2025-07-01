@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Representantes</title>
+        <link href="../../../Libs/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <script src="../../../Libs/bootstrap-5.3.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    </head>
+    
+<body>
+    <form action="../php/controlador_insertar.php" method="POST">
+        <div>
+            <h2 class="text-primary"> Nuevo Representante</h2>
+        </div>
+
+        <div class="container">
+            
+            <div class="form-group row">
+                <label class="col-12">Cédula  de ciudadania</label>
+                <input type="text" 
+                       class="form-control col-12" 
+                       name="txt_cedula" 
+                       id="txt_cedula" 
+                       placeholder='Cédula' 
+                       maxlength="16"  
+                       required
+                >
+            </div>
+
+            <div class="form-group row"> 
+                    <label for="txt_fecnac" ><b>Fecha/nacimiento</b></label><br>
+                    <input type="date" name="txt_fecnac" id="txt_fecnac"  ><br> 
+             </div>       
+                    
+            <div class="form-group row">
+                <label class="col-12">APELLIDO Y NOMBRES DEL REPRESENTANTE</label>
+                <input type="text" 
+                       class="form-control col-12" 
+                       name="txt_apenom" 
+                       id="txt_apenom" 
+                       placeholder='Apellidos y Nombres' 
+                       maxlength="80"  
+                       required
+                >
+            </div>
+            
+            <div class="form-group row">
+                    <label><b>Sexo:</b></label><br>
+                    
+                    <input type="radio"  name="rad_sexo" id="rad_masculino" value=1 checked>
+                    <label>Masculino</label><br>
+                    
+                    <input type="radio"  name="rad_sexo" id="rad_femenino" value=2 >
+                    <label>Femenino</label>
+            </div>
+           
+               <label for="txt_estciv"><b>Estado Civil:</b></label><br>
+                     <select name="txt_estciv" id="txt_estciv">
+                        <option value=1 >Casada(o)</option>
+                        <option value=2  selected>Soltera(o)</option>
+                        <option value=3 >Divorciada(o)</option>
+                        <option value=4 >Viuda(o)</option>
+                        <option value=5 >Unión Libre</option>
+                     </select>  
+
+            <div class="form-group row">
+                <label class="col-12">DIRECCION DOMICILIARIA</label>
+                <input type="text" 
+                       class="form-control col-12" 
+                       name="txt_domici" 
+                       id="txt_domici" 
+                       placeholder='Ingrese la dirección domiciliaria' 
+                       maxlength="100"  
+                       required
+                >
+            </div>
+      
+
+            <div class="form-group row">
+                <label class="col-12 text-center">
+                    <button type="submit" class="btn btn-success">Guardar representante</button>
+                </label>
+            </div>
+
+        </div>
+    </form>
+
+   
+
+</body>
+</html>
